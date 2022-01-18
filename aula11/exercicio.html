@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Qual o país</title>
+</head>
+<body>
+   
+   <div class="button">
+        <h1>Qual é o seu país?</h1>
+        Seu país é:  <input type="text" name="txtpais" id="txtpais" class="buttonpr"> 
+        <input type="button" value="Verificar" onclick="lugar()" class="verificar">
+    </div>
+    <div class="res" id="res">
+
+    </div>
+
+    <script>
+        function lugar() {
+            var txtre = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var pais = txtre.value
+            
+            if (pais == 'Brasil') {
+                res.innerHTML = `<p>Que legal! voce é Brasileiro(a)!</p>`
+            } else{
+                res.innerHTML = `<p>Você é estrangeiro(a)!</p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
